@@ -1,0 +1,21 @@
+{
+  "development": {
+    "host": "localhost",
+    "port": 8080,
+    "pretty": true,
+    "title": "My Awesome App (development)",
+    "message": "You are awesome! - dev",
+    "dbURL" : "mongodb://localhost/todos",
+    "debug" : true
+  },
+
+  "production": {
+    "host": "localhost",
+    "port": 8080,
+    "pretty": false,
+    "title": "My Awesome App (prodcution)",
+    "message": "You are awesome! - prod",
+    "dbURL" : "mongodb://localhost/todos",
+    "debug" : false
+  }
+}
