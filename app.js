@@ -19,6 +19,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 //app.use(cookieParser);
 //app.use(expressSession({secret: config.sessionToken}));
+//app.use(passport.initialize());
+//app.use(passport.session());
 app.use(bodyParser());
 
 require('./app/routes')(app, passport);
