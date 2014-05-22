@@ -6,8 +6,8 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 
 var paths = {
-  models:  './models/*.js',
-  routes:  './routes/*.js',
+  models:  './app/models/*.js',
+  routes:  './app/routes/*.js',
   scripts: './app/assets/js/*.js'
 };
 

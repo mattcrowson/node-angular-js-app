@@ -13,6 +13,8 @@ mongoose.connect(config.dbURL);
 
 mongoose.set('debug', config.debug);
 
+require('./app/config/passport')(passport);
+
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 //app.use(cookieParser);
