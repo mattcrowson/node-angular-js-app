@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = function(app, passport) {
   var express = require('express');
   var router  = express.Router();
   var Todo    = require('../models/todo');

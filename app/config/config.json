@@ -1,21 +1,23 @@
 {
   "development": {
+    "dbURL" : "mongodb://localhost/todos",
+    "debug" : true,
     "host": "localhost",
+    "message": "You are awesome! - dev",
     "port": 8080,
     "pretty": true,
-    "title": "My Awesome App (development)",
-    "message": "You are awesome! - dev",
-    "dbURL" : "mongodb://localhost/todos",
-    "debug" : true
+    "sessionToken": "mysecretdevelopmentsessiontoken",
+    "title": "My Awesome App (development)"
   },
 
   "production": {
+    "dbURL" : "mongodb://localhost/todos",
+    "debug" : false,
     "host": "localhost",
+    "message": "You are awesome! - prod",
     "port": 8080,
     "pretty": false,
-    "title": "My Awesome App (prodcution)",
-    "message": "You are awesome! - prod",
-    "dbURL" : "mongodb://localhost/todos",
-    "debug" : false
+    "sessionToken": "mysecretproductionsessiontoken",
+    "title": "My Awesome App (production)"
   }
 }
