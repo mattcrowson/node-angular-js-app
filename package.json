@@ -2,8 +2,8 @@
   "name": "node-angular-js",
   "version": "0.0.1",
   "description": "Sample Node Angular JS web application calling RESTful API.",
-  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -25,5 +25,10 @@
     "gulp-concat": "2.2.x",
     "gulp-jshint": "1.6.x",
     "gulp-uglify": "0.3.x"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattcrowson/node-angular-js-app"
+  },
+  "engines": {"node": "0.10.28"}
 }
