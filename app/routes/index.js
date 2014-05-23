@@ -54,7 +54,12 @@ module.exports = function(app, passport) {
 
   app.route('/login')
     .get(function(req, res) {
-      res.sendfile('./public/login.html');
+      res.sendfile('./public/html/login.html');
     })
     .post(passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }));
+
+  app.route('/')
+    .get(function(req, res) {
+      res.sendfile('./public/html/index.html');
+  });
 };

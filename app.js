@@ -15,8 +15,8 @@ mongoose.set('debug', config.debug);
 
 require('./app/config/passport')(passport);
 
-app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
+app.use(express.static(__dirname + '/public'));
 //app.use(cookieParser);
 //app.use(expressSession({secret: config.sessionToken}));
 app.use(passport.initialize());

@@ -6,6 +6,7 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 
 var paths = {
+  html:  './app/html/*.html',
   models:  './app/models/*.js',
   routes:  './app/routes/*.js',
   scripts: './app/assets/js/*.js'
@@ -18,13 +19,19 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('clean', function() {
-  return gulp.src('public/assets/**', {read: false})
+  return gulp.src(['public/assets/**', 'public/html/**'], {read: false})
     .pipe(clean());
 });
 
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     .pipe(gulp.dest('public/assets/js'));
+});
+
+
+gulp.task('html', function() {
+  return gulp.src(paths.html)
+    .pipe(gulp.dest('public/html'));
 });
 
 // Rerun the task when a file changes
@@ -34,4 +41,4 @@ gulp.task('watch', function() {
 
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['jshint', 'clean', 'scripts']);
+gulp.task('default', ['jshint', 'clean', 'scripts', 'html']);
