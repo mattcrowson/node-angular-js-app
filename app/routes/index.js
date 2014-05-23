@@ -50,23 +50,11 @@ module.exports = function(app, passport) {
 
     // accessed at GET http://host:port/api/todos
     app.use('/api/todos', router);
-
   })();
 
-  (function() {
-    var router  = express.Router();
-
-    router.get('/', function(req, res) {
+  app.route('/login')
+    .get(function(req, res) {
       res.sendfile('./public/login.html');
-    });
-
-    router.post('/', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }));
-
-    app.use('/login', router);
-  })();
-
-  app.use('*', function(req, res) {
-    // load the single view file (angular will handle the page changes on the front-end)
-    res.sendfile('./public/index.html');
-  });
+    })
+    .post(passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }));
 };
