@@ -12,7 +12,7 @@ module.exports = function(passport) {
     });
   });
 
-  passport.use('local', new LocalStrategy(
+  passport.use(new LocalStrategy(
     function(username, password, done) {
       User.findOne({ email: username }, function(err, user) {
         if (err) {
